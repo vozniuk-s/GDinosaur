@@ -13,6 +13,11 @@ public class ChangeNickname : MonoBehaviour
     public Text highScoreText;
     public Text lastScoreText;
 
+    private void Awake()
+    {
+        if (GameData.nickname != null)
+            inputField.text = GameData.nickname;
+    }
     void Start()
     {
         inputField = GetComponent<InputField>();
@@ -23,6 +28,7 @@ public class ChangeNickname : MonoBehaviour
 
     void OnInputChanged(string newText)
     {
+        GameData.nickname = newText;
         StartCoroutine(GetScore(newText));
     }
 

@@ -702,7 +702,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: high_score
+  m_Text: 0
 --- !u!222 &830799480
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -781,7 +781,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: last_score
+  m_Text: 0
 --- !u!222 &1168032102
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1227,6 +1227,7 @@ GameObject:
   - component: {fileID: 2028877583}
   - component: {fileID: 2028877582}
   - component: {fileID: 2028877581}
+  - component: {fileID: 2028877584}
   m_Layer: 5
   m_Name: btn_play
   m_TagString: Untagged
@@ -1297,7 +1298,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2028877582}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2028877584}
+        m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2028877582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1336,6 +1349,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028877579}
   m_CullTransparentMesh: 1
+--- !u!114 &2028877584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028877579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e69db559f0fdaa4a88a18e8aad5a347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2071644288
 GameObject:
   m_ObjectHideFlags: 0
