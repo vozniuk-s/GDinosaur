@@ -345,7 +345,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: lb_btn_text
 --- !u!222 &352334803
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -861,7 +861,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: lb_btn_text
 --- !u!222 &1547574472
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -981,7 +981,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nickname
+  m_Text: lb_placeholder_text
 --- !u!222 &1584926222
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1348,6 +1348,7 @@ GameObject:
   - component: {fileID: 2071644292}
   - component: {fileID: 2071644291}
   - component: {fileID: 2071644290}
+  - component: {fileID: 2071644293}
   m_Layer: 5
   m_Name: input_nickname
   m_TagString: Untagged
@@ -1482,6 +1483,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071644288}
   m_CullTransparentMesh: 1
+--- !u!114 &2071644293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071644288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d820a438779e646b5f87d98377e690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 0}
+  highScoreText: {fileID: 830799479}
+  lastScoreText: {fileID: 1168032101}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
