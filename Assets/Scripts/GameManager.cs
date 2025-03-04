@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-using System;
-using SimpleJSON;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
@@ -56,7 +54,6 @@ public class GameManager : MonoBehaviour
     }
     private void StopGame()
     {
-        Time.timeScale = 0;
         StartCoroutine(SaveScore());
         SceneManager.LoadScene("MenuScene");
     }

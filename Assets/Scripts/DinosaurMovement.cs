@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using System;
 using UnityEngine;
 
@@ -27,7 +24,7 @@ public class DinosaurMovement : MonoBehaviour
                 _isGrounded = true;
         }
 
-        if (Input.GetButtonDown("Jump") && _isGrounded)
+        if (Input.GetMouseButtonDown(0) && _isGrounded)
         {
             _isGrounded = false;
             startPosition = transform.position;

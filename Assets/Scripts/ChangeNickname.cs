@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using SimpleJSON;
 
@@ -15,21 +13,28 @@ public class ChangeNickname : MonoBehaviour
 
     private void Awake()
     {
+        inputField = GetComponent<InputField>();
+        Application.targetFrameRate = 60;
+
         if (GameData.nickname != null)
+        {
             inputField.text = GameData.nickname;
+            StartCoroutine(GetScore(GameData.nickname));
+        }
     }
     void Start()
     {
-        inputField = GetComponent<InputField>();
-
         if (inputField != null)
             inputField.onValueChanged.AddListener(OnInputChanged);
     }   
 
     void OnInputChanged(string newText)
     {
-        GameData.nickname = newText;
-        StartCoroutine(GetScore(newText));
+        if (!string.IsNullOrEmpty(newText))
+        {
+            GameData.nickname = newText;
+            StartCoroutine(GetScore(newText));
+        }
     }
 
     IEnumerator GetScore(string userName)
